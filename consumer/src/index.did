@@ -1,0 +1,26 @@
+type Order = record {
+  id : text;
+  farmerId : text;
+  createdAt : nat64;
+  updatedAt : opt nat64;
+  typeOfGood : text;
+  amount : nat64;
+  consumerId : text;
+  payment : text;
+};
+type OrderPayload = record {
+  farmerId : text;
+  typeOfGood : text;
+  amount : nat64;
+  consumerId : text;
+  payment : text;
+};
+type _AzleResult = variant { Ok : Order; Err : text };
+type _AzleResult_1 = variant { Ok : vec Order; Err : text };
+service : () -> {
+  createOrder : (OrderPayload) -> (_AzleResult);
+  deleteOrder : (text) -> (_AzleResult);
+  getOrder : (text) -> (_AzleResult) query;
+  getOrders : () -> (_AzleResult_1) query;
+  updateOrder : (text, OrderPayload) -> (_AzleResult);
+}

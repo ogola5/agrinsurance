@@ -1,0 +1,13 @@
+{
+    "canisters": {
+        "consumer": {
+            "type": "custom",
+            "build": "npx azle consumer",
+            "root": "src",
+            "ts": "src/index.ts",
+            "candid": "src/index.did",
+            "wasm": ".azle/consumer/consumer.wasm.gz"
+        }
+    }
+}
+
