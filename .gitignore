@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+.azle
+.dfx
+dfx_generated
 # dependencies
 /node_modules
 /.pnp
